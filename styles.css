@@ -1,0 +1,463 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(10, 10, 10);
+  color: white;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 20px;
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgb(28, 27, 27);
+  z-index: 10;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.3em;
+  color: white;
+  text-decoration: none;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+}
+
+.nav-menu li a {
+  color: #918f8f;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.nav-menu li a:hover {
+  color: white;
+}
+
+.contact-button {
+  background-color: rgb(10, 10, 10);
+  border: 1px solid rgb(41, 40, 40);
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.contenido-principal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 130px 20px 50px;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+  height: 800px;
+}
+
+.intro-text {
+  flex: 1;
+  max-width: 700px;
+}
+
+.contenido-principal h1 {
+  font-size: 2.9em;
+  line-height: 1.2;
+}
+
+.contenido-principal p {
+  color: #918f8f;
+  font-size: 1.2em;
+  margin: 15px 0;
+}
+
+.button {
+  display: inline-block;
+  color: white;
+  font-size: 1em;
+  text-decoration: none;
+  border: 1px solid rgb(70, 69, 69);
+  padding: 10px 20px;
+  border-radius: 8px;
+  margin: 5px;
+  font-weight: 600;
+}
+
+.button.secondary {
+  background-color: transparent;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  
+}
+
+.social-links svg {
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  color: white;
+  margin: 3px;
+}
+
+.social-links svg:hover {
+  background-color: #353535;
+}
+
+.foto-de-perfil {
+  flex-shrink: 0;
+}
+
+.foto-de-perfil img {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%; 
+  object-fit: cover; 
+  box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+hr {
+  width: 90%;
+  max-width: 1200px;
+  margin: 40px auto;
+  border: none;
+  border-top: 1px solid transparent;
+  border-image: linear-gradient(to right, transparent, rgb(32, 32, 32), transparent) 1;
+}
+
+section {
+  padding: 50px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: 2.5em;
+  text-align: center;
+  letter-spacing: -1px;
+  margin-bottom: 15px;
+}
+
+section > p {
+  color: #b3b0b0;
+  font-size: 1.2em;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* Cards */
+.tarjetas, .tarjeta2 {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card, .card2 {
+  border: 1px solid rgb(41, 41, 41);
+  width: 100%;
+  max-width: 350px;
+  padding: 30px;
+  border-radius: 10px;
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover, .card2:hover {
+  box-shadow: 0 0 15px rgba(128, 128, 128, 0.5);
+}
+
+.card h3, .card2 h3 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1.5em;
+}
+
+.card ul {
+  margin-top: 10px;
+  color: #d3d3d3;
+}
+
+.card2 p {
+  color: #9b9999;
+  font-size: 0.9em;
+  margin: 5px 0;
+}
+
+.card2 .info {
+  font-size: 1em;
+  margin: 15px 0;
+}
+
+.project-links {
+  display: flex;
+  gap: 10px;
+}
+
+.card2 a {
+  text-decoration: none;
+  border: 1px solid rgb(43, 43, 43);
+  font-size: 0.9em;
+  padding: 8px 15px;
+  color: white;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card2 a:hover {
+  background-color: #1e1e1e;
+}
+
+/* Education */
+.educacion-card, .certificacion {
+  border: 2px solid rgb(35, 34, 34);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  transition: box-shadow 0.3s ease;
+}
+
+.educacion-card:hover, .certificacion:hover {
+  box-shadow: 0 0 15px rgba(128, 128, 128, 0.5);
+}
+
+.educacion-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.año {
+  float: right;
+  font-size: 0.9em;
+  color: rgb(148, 147, 147);
+}
+
+.educacion-card p, .certificacion p {
+  color: #d3d3d3;
+  margin: 5px 0;
+}
+
+.highlight {
+  font-weight: 600;
+  margin-top: 15px;
+}
+
+.educacion-card ul {
+  color: rgb(129, 128, 128);
+  margin-top: -10px;
+  padding: 16px;
+  
+}
+
+/* Contact */
+.contenedor-flex {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.cuadro {
+  background: rgb(8, 8, 8);
+  border: 1px solid rgb(34, 34, 34);
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 500px;
+  transition: box-shadow 0.3s ease;
+}
+
+.cuadro:hover {
+  box-shadow: 0 0 15px rgba(128, 128, 128, 0.5);
+}
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+
+.formulario label {
+  margin: 10px 0 5px;
+}
+
+.formulario input, .formulario textarea {
+  width: 100%;
+  background-color: rgb(10, 10, 10);
+  border: 1px solid rgb(56, 56, 56);
+  border-radius: 5px;
+  padding: 10px;
+  color: white;
+}
+
+.formulario textarea {
+  height: 100px;
+  resize: vertical;
+}
+
+.formulario button {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #353535;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.info-contacto p {
+  margin: 15px 0 5px;
+}
+
+.info-contacto span, .info-contacto a {
+  color: gray;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.footer p {
+  font-size: 0.9em;
+  font-weight: 600;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+      flex-wrap: wrap;
+      padding: 10px 15px;
+  }
+
+  .nav-toggle {
+      display: block;
+  }
+
+  .nav-menu {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      padding: 10px 0;
+  }
+
+  .nav-menu.active {
+      display: flex;
+  }
+
+  .contact-button {
+      margin-top: 10px;
+  }
+
+  .contenido-principal {
+      flex-direction: column;
+      text-align: center;
+      padding: 100px 15px 30px;
+  }
+
+  .intro-text {
+      margin-bottom: 20px;
+  }
+
+  .contenido-principal h1 {
+      font-size: 2em;
+  }
+
+  .contenido-principal p {
+      font-size: 1em;
+  }
+
+  .foto-de-perfil img {
+      width: 200px;
+      height: 200px;
+  }
+
+  h2 {
+      font-size: 2em;
+  }
+
+  section > p {
+      font-size: 1em;
+  }
+
+  .card, .card2 {
+      max-width: 100%;
+  }
+
+  .educacion-card h3, .card2 h3 {
+      font-size: 1.3em;
+  }
+
+  .año {
+      float: none;
+      display: block;
+      margin-top: 5px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contenido-principal h1 {
+      font-size: 1.5em;
+  }
+
+  .button {
+      padding: 8px 15px;
+      font-size: 0.9em;
+  }
+
+  .foto-de-perfil img {
+      width: 150px;
+      height: 150px;
+  }
+
+  h2 {
+      font-size: 1.5em;
+  }
+
+  .card h3, .card2 h3 {
+      font-size: 1.2em;
+  }
+
+  .formulario input, .formulario textarea {
+      padding: 8px;
+  }
+
+  .formulario button {
+      padding: 8px;
+  }
+}
